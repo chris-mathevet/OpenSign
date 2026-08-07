@@ -1,0 +1,48 @@
+services:
+  server:
+    image: inlibro-opensign-server:latest
+    container_name: OpenSignServer-container
+    volumes:
+      - opensign-files:/usr/src/app/files
+      - ./patch-opensign.sh:/patch-opensign.sh
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - mongo
+    env_file: .env.prod
+    environment:
+      - NODE_ENV=production
+      - SERVER_URL={OPENSIGN_HOST_URL}/api/app
+      - PUBLIC_URL={OPENSIGN_HOST_URL}
+    networks:
+      - app-network
+  mongo:
+    image: mongo:latest
+    container_name: mongo-container
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "127.0.0.1:27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: {ADMIN_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: {ADMIN_PASSWORD}
+    networks:
+      - app-network
+  client:
+    image: inlibro-opensign:latest
+    container_name: OpenSign-container
+    depends_on:
+      - server
+    env_file: .env.prod
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  web-root:
+  opensign-files:
