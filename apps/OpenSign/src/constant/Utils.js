@@ -2840,7 +2840,7 @@ export const getAppLogo = async () => {
       localStorage.setItem("appname", "InLibro - Signatures");
       localStorage.setItem("favicon", appInfo.fev_Icon);
       return {
-        logo: tenant?.logo,
+        logo: tenant?.logo ?? appInfo.applogo,
         favicon: resolvedFavicon,
         user: tenant?.user
       };
