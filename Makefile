@@ -3,6 +3,19 @@
 SERVER_IMAGE_NAME = inlibro-opensign-server:latest
 CLIENT_IMAGE_NAME = inlibro-opensign:latest
 
+
+help:
+	@echo ""
+	@echo "Usage:"
+	@echo "  make build-server-image  Crée l'image Docker du serveur"
+	@echo "  make build-client-image  Crée l'image Docker du client"
+	@echo "  make build-all-images    Crée les images Docker"
+	@echo "  make install             Déploie les conteneurs de l'application (permissions sudo nécessaires)"
+	@echo "  make uninstall           Supprime les conteneurs de l'application (permissions sudo nécessaires)"
+	@echo "  make true-uninstall      Supprime les conteneurs de l'application et leurs volumes (permissions sudo nécessaires)"
+	@echo "  make all                 Crée les images Docker et déploie l'application (permissions sudo nécessaires)"
+	@echo ""
+
 build-server-image:
 	docker rmi $(SERVER_IMAGE_NAME) 2>/dev/null || true
 	docker build -t $(SERVER_IMAGE_NAME) -f ./apps/OpenSignServer/Dockerhubfile . --no-cache
