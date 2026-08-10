@@ -1515,7 +1515,7 @@ export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
   //pdfOriginalWH contained all pdf's pages width and height
   for (let i = 0; i < pdfOriginalWH?.length; i++) {
     const fontSize = 10;
-    const textContent = documentId && `${appName} DocumentId: ${documentId} `;
+    const textContent = documentId && `Identifiant de signature OpenSign : ${documentId} `;
     const pages = pdfDoc.getPages();
     const page = pages[i];
     const getSize = pdfOriginalWH[i];
