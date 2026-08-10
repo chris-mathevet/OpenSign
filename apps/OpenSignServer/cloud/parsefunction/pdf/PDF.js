@@ -9,6 +9,7 @@ import {
   getSecureUrl,
   appName,
   serverAppId,
+  logoUrl
 } from '../../../Utils.js';
 import GenerateCertificate from './GenerateCertificate.js';
 import { pdflibAddPlaceholder } from '@signpdf/placeholder-pdf-lib';
@@ -150,7 +151,7 @@ async function sendNotifyMail(doc, signUser, mailProvider, publicUrl) {
   try {
     const TenantAppName = appName;
     const logo =
-      "<img src='https://qikinnovation.ams3.digitaloceanspaces.com/logo.png' height='50' style='padding:20px'/>";
+      `<img src='${logoUrl}' height='50' style='padding:20px'/>`;
 
     const auditTrailCount =
       doc?.AuditTrail?.filter(x => COMPLETION_ACTIVITIES.includes(x.Activity))?.length || 0;
@@ -198,7 +199,7 @@ async function sendCompletedMail(obj) {
   const pdfName = doc.Name;
   const TenantAppName = appName;
   const logo =
-    "<img src='https://qikinnovation.ams3.digitaloceanspaces.com/logo.png' height='50' style='padding:20px'/>";
+    `<img src='${logoUrl}' height='50' style='padding:20px'/>`;
 
   let signersMail;
   if (doc?.Signers?.length > 0) {

@@ -1,4 +1,5 @@
 import { TEditorConfiguration } from "../../documents/editor/core";
+import { logoUrl } from "../../../../constant/Utils";
 
 const getRequestEmail = (
 ): TEditorConfiguration => {
@@ -16,7 +17,7 @@ const getRequestEmail = (
               props: {
                 width: null,
                 height: 50,
-                url: "https://qikinnovation.ams3.digitaloceanspaces.com/logo.png",
+                url: logoUrl,
                 alt: "logo",
                 linkHref: null,
                 contentAlignment: "middle"

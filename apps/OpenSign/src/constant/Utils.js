@@ -34,6 +34,8 @@ export const drawWidget = "draw";
 export const textWidget = "text";
 export const radioButtonWidget = "radio button";
 export const cellsWidget = "cells";
+export const apiUrl = `${window.location.origin}/api/`;
+export const logoUrl = `${apiUrl}public/assets/images/logo.png`;
 const duplicateAutoApplyWidgetTypes = [
   "name",
   "company",
@@ -4222,7 +4224,7 @@ function _removeWidgetAnnotations(pdfDoc) {
 
 export const mailTemplate = (param) => {
   const appName = "InLibro - Signatures";
-  const logo = `<div style='padding:10px'><img src='https://qikinnovation.ams3.digitaloceanspaces.com/logo.png' height='50' /></div>`;
+  const logo = `<div style='padding:10px'><img src='${logoUrl}' height='50' /></div>`;
 
   const subject = `${param.senderName} has requested you to sign "${param.title}"`;
   const body =
