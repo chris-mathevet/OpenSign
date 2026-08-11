@@ -100,7 +100,7 @@
       "Manage templates": "Gérer les modèles",
       "Embedding": "Intégration"
     },
-    "OpenSign™ Drive": "Lecteur {{appName}}",
+    "Drive": "Lecteur {{appName}}",
     "Reports": "Rapports",
     "Documents": "Documents",
     "Documents-Children": {
@@ -692,7 +692,7 @@
     "Optional": "Facultative"
   },
   "all-right": "Tous droits réservés",
-  "version": "version",
+  "version": "Basé sur la version d'OpenSign",
   "social-media": {
     "github": "Github",
     "linked-in": "LinkedIn",
@@ -1266,6 +1266,10 @@
   "email-settings-redirect-message": "Ce paramètre a été déplacé de la console vers Paramètres du menu principal → Préférences. Cette page sera supprimée dans les prochaines versions.",
   "go-to-preferences-menu": "Aller au menu Préférences",
   "document-download-filename-format": "Format du nom de fichier pour le téléchargement du document",
+  "document-download-filename-format-docname": "Nom du document.pdf",
+  "document-download-filename-format-docname-signed": "Nom du document - Signé.pdf",
+  "document-download-filename-format-docname-email": "Nom du document - name@domain.com.pdf",
+  "document-download-filename-format-docname-email-date": "Nom du document - name@domain.com - date.pdf",
   "preview": "Aperçu : ",
   "download-filename-format-help": "Choisissez comment les fichiers PDF téléchargés sont nommés. Votre sélection est enregistrée dans votre profil et utilisée dans toute l'application.",
   "delete-action-prohibited": "Cette action n'est pas autorisée. Veuillez contacter votre administrateur pour demander la suppression du compte.",

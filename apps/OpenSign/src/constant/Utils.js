@@ -34,6 +34,8 @@ export const drawWidget = "draw";
 export const textWidget = "text";
 export const radioButtonWidget = "radio button";
 export const cellsWidget = "cells";
+export const apiUrl = `${window.location.origin}/api/`;
+export const logoUrl = `${apiUrl}public/assets/images/logo.png`;
 const duplicateAutoApplyWidgetTypes = [
   "name",
   "company",
@@ -1513,7 +1515,7 @@ export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
   //pdfOriginalWH contained all pdf's pages width and height
   for (let i = 0; i < pdfOriginalWH?.length; i++) {
     const fontSize = 10;
-    const textContent = documentId && `${appName} DocumentId: ${documentId} `;
+    const textContent = documentId && `Identifiant de signature OpenSign : ${documentId} `;
     const pages = pdfDoc.getPages();
     const page = pages[i];
     const getSize = pdfOriginalWH[i];
@@ -2838,7 +2840,7 @@ export const getAppLogo = async () => {
       localStorage.setItem("appname", "InLibro - Signatures");
       localStorage.setItem("favicon", appInfo.fev_Icon);
       return {
-        logo: tenant?.logo,
+        logo: tenant?.logo ?? appInfo.applogo,
         favicon: resolvedFavicon,
         user: tenant?.user
       };
@@ -4222,7 +4224,7 @@ function _removeWidgetAnnotations(pdfDoc) {
 
 export const mailTemplate = (param) => {
   const appName = "InLibro - Signatures";
-  const logo = `<div style='padding:10px'><img src='https://qikinnovation.ams3.digitaloceanspaces.com/logo.png' height='50' /></div>`;
+  const logo = `<div style='padding:10px'><img src='${logoUrl}' height='50' /></div>`;
 
   const subject = `${param.senderName} has requested you to sign "${param.title}"`;
   const body =

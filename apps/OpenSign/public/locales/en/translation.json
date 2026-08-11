@@ -100,7 +100,7 @@
       "Manage templates": "Manage templates",
       "Embedding": "Embedding"
     },
-    "OpenSign™ Drive": "{{appName}} Drive",
+    "Drive": "{{appName}} Drive",
     "Reports": "Reports",
     "Documents": "Documents",
     "Documents-Children": {
@@ -694,7 +694,7 @@
     "Optional": "Optional"
   },
   "all-right": "All rights reserved",
-  "version": "version",
+  "version": "Based on OpenSign version",
   "social-media": {
     "github": "Github",
     "linked-in": "LinkedIn",
@@ -1268,6 +1268,10 @@
   "email-settings-redirect-message": "This setting has been moved from the console to Main Menu Settings → Preferences. This page will be removed in upcoming versions.",
   "go-to-preferences-menu": "Go to Preferences menu",
   "document-download-filename-format": "Document download filename format",
+  "document-download-filename-format-docname": "document Name.pdf",
+  "document-download-filename-format-docname-signed": "document Name - Signed.pdf",
+  "document-download-filename-format-docname-email": "document Name - name@domain.com.pdf",
+  "document-download-filename-format-docname-email-date": "document Name - name@domain.com - date.pdf",
   "preview": "Preview: ",
   "download-filename-format-help": "Choose how downloaded PDFs are named. Your selection is saved to your profile and used across the app.",
   "delete-action-prohibited": "This action is not permitted. Kindly contact your administrator to request account deletion.",

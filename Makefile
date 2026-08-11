@@ -1,7 +1,21 @@
-.PHONY: build-server-image build-client-image build-all-images install uninstall true-uninstall all
+.PHONY: build-server-image build-client-image build-all-images install update uninstall true-uninstall update-all all
 
 SERVER_IMAGE_NAME = inlibro-opensign-server:latest
 CLIENT_IMAGE_NAME = inlibro-opensign:latest
+
+help:
+	@echo ""
+	@echo "Usage:"
+	@echo "  make build-server-image  Crée l'image Docker du serveur"
+	@echo "  make build-client-image  Crée l'image Docker du client"
+	@echo "  make build-all-images    Crée les images Docker"
+	@echo "  make install             Déploie les conteneurs de l'application (permissions sudo nécessaires)"
+	@echo "  make update              Redéploie les conteneurs de l'application pour effectuer des mises à jour, ne modifie pas le conteneur de base de données (permissions sudo nécessaires)"
+	@echo "  make uninstall           Supprime les conteneurs de l'application (permissions sudo nécessaires)"
+	@echo "  make true-uninstall      Supprime les conteneurs de l'application et leurs volumes (permissions sudo nécessaires)"
+	@echo "  make update-all          Crée les images Docker et mets à jour l'application existante (permissions sudo nécessaires)"
+	@echo "  make all                 Crée les images Docker et déploie l'application (permissions sudo nécessaires)"
+	@echo ""
 
 build-server-image:
 	docker rmi $(SERVER_IMAGE_NAME) 2>/dev/null || true
@@ -19,10 +33,15 @@ install:
 		--smtp-host=$(smtp_host) \
 		--smtp-port=$(smtp_port)
 
+update:
+	./installation-opensign.sh --update
+
 uninstall:
 	./installation-opensign.sh --uninstall
 
 true-uninstall:
 	./installation-opensign.sh --true-uninstall
+
+update-all: build-all-images update
 
 all: build-all-images install

@@ -50,9 +50,9 @@ const Footer = () => {
       <footer className="op-footer op-footer-center py-3 bg-base-300 text-base-content text-center text-[13px]">
         <aside>
           <p>
-            {t("all-right")} &copy; {new Date().getFullYear()} &nbsp;
+            {t("all-right")} &copy; {new Date().getFullYear()} &nbsp; {appName} &nbsp;
             <span onClick={openUrl} className="hover:underline cursor-pointer">
-              {appName} ( {t("version")}:{" "}
+              ( {t("version")}:{" "}
               {version ? version : `${Package.version} `})
             </span>
           </p>

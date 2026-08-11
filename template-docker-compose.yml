@@ -4,7 +4,6 @@ services:
     container_name: OpenSignServer-container
     volumes:
       - opensign-files:/usr/src/app/files
-      - ./patch-opensign.sh:/patch-opensign.sh
     ports:
       - "127.0.0.1:8080:8080"
     depends_on:
