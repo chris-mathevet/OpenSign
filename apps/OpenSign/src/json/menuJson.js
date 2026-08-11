@@ -73,7 +73,7 @@ const sidebarList = [
   },
   {
     icon: "fa-light fa-folder",
-    title: "InLibro - Signatures Drive",
+    title: "Drive",
     target: "_self",
     pageType: "",
     description: "",
