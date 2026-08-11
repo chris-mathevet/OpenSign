@@ -1597,7 +1597,7 @@
   "widget-hidden-due-to-logic": "Dieses Widget ist aufgrund bedingter Logik ausgeblendet.",
   "remove": "Entfernen",
   "attachments-docx-not-supported": "Derzeit tritt ein Problem beim Hochladen von DOCX-Dateien auf. Bitte versuchen Sie, das Dokument in einem anderen unterstützten Format hochzuladen, oder versuchen Sie es später erneut.",
-   "access-code": "Zugangscode",
+  "access-code": "Zugangscode",
   "access-code-set": "Zugangscode festgelegt",
   "access-code-add": "Zugangscode hinzufügen",
   "access-code-help": "Optionales Geheimnis, das nur dieser Unterzeichner kennt. Vor dem Anzeigen oder Unterschreiben des Dokuments wird die Eingabe verlangt. Geben Sie den Code dem Empfänger auf einem anderen Kanal weiter (Telefon, persönlich).",
@@ -1613,5 +1613,13 @@
   "access-code-warning": "Dieser Zugangscode kann nicht geändert oder abgerufen werden, sobald das Dokument versendet wurde.",
   "copy-access-code": "Zugangscode kopieren",
   "access-code-upgrade-msg": "Zugangscodes sind nur in kostenpflichtigen Tarifen verfügbar. Aktualisieren Sie Ihren Tarif, um Zugangscodes für Empfänger hinzuzufügen.",
-  "already-copied-to-clipboard": "Bereits in die Zwischenablage kopiert"
+  "already-copied-to-clipboard": "Bereits in die Zwischenablage kopiert",
+  "audit-activity": {
+    "sent": "Gesendet",
+    "resend": "Erneut senden",
+    "signed": "Signiert",
+    "viewed": "Angesehen",
+    "awaited": "Ausstehend",
+    "created": "Erstellt"
+  }
 }

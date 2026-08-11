@@ -1615,5 +1615,13 @@
   "access-code-warning": "Ce code d'accès ne peut pas être modifié ou récupéré une fois le document envoyé.",
   "copy-access-code": "Copier le code d'accès",
   "access-code-upgrade-msg": "Les codes d'accès sont disponibles uniquement dans les forfaits payants. Améliorez votre forfait pour ajouter des codes d'accès aux destinataires.",
-  "already-copied-to-clipboard": "Déjà copié dans le presse-papiers"
+  "already-copied-to-clipboard": "Déjà copié dans le presse-papiers",
+  "audit-activity": {
+    "sent": "Envoyé",
+    "resend": "Renvoyer",
+    "signed": "Signé",
+    "viewed": "Consulté",
+    "awaited": "En attente",
+    "created": "Créé"
+  }
 }
