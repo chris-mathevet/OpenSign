@@ -16,6 +16,7 @@ MONGO_USER="opensignadmin"
 SMTP_HOST=""
 SMTP_PORT=""
 SMTP_MAIL="ne-pas-repondre@inlibro.com"
+UPDATE=0
 
 if [ -f /inlibro/bin/librairie_inlibro.sh ]; then
     . /inlibro/bin/librairie_inlibro.sh
@@ -32,22 +33,23 @@ function help(){
 Script d'installation de OpenSign
 
 Options:
-    -h | --help : Afficher ce message
+    -h | --help :                           Afficher ce message
 
-    -u | --host-url [argument]: Valeur de la variable d'environement stockant l'host d'opensign
+    -u | --host-url [argument]:             Valeur de la variable d'environement stockant l'host d'opensign
 
-    -o | --opensign-port [argument]: Port pour l'API backend OpenSign (Défaut : $OPENSIGN_PORT)
-    -m | --mongo-port [argument]: Port pour mongoDB (Défaut : $MONGO_PORT)
-    -c | --client-port [argument]: Port pour l'interface utilisateur OpenSign (Défaut : $CLIENT_PORT)
+    -o | --opensign-port [argument]:        Port pour l'API backend OpenSign (Défaut : $OPENSIGN_PORT)
+    -m | --mongo-port [argument]:           Port pour mongoDB (Défaut : $MONGO_PORT)
+    -c | --client-port [argument]:          Port pour l'interface utilisateur OpenSign (Défaut : $CLIENT_PORT)
 
-    -p | --installation-path [argument]: Chemin vers le répertoire d'installation (Crée si inexistant, Défaut : $INSTALLATION_PATH)
+    -p | --installation-path [argument]:    Chemin vers le répertoire d'installation (Crée si inexistant, Défaut : $INSTALLATION_PATH)
 
-    --smtp-host [argument]: Host SMTP (Le port SMTP doit être fourni avec --smtp-port)
-    --smtp-port [argument]: Port SMTP (L'host SMTP doit être fourni avec --smtp-host)
-    --smtp-mail [argument]: Adresse courriel utilisé pour l'envoie de courriel automatique (Défaut : $SMTP_MAIL)
+    --smtp-host [argument]:                 Host SMTP (Le port SMTP doit être fourni avec --smtp-port)
+    --smtp-port [argument]:                 Port SMTP (L'host SMTP doit être fourni avec --smtp-host)
+    --smtp-mail [argument]:                 Adresse courriel utilisé pour l'envoie de courriel automatique (Défaut : $SMTP_MAIL)
 
-    --uninstall : Désinstalle OpenSign et son répertoire d'installation
-    --true-uninstall : Désinstalle OpenSign et son répertoire d'installation et la base de donnée montée
+    --update :                              Mets à jour les conteneurs serveurs et client avec les dernières versions des images
+    --uninstall :                           Désinstalle OpenSign et son répertoire d'installation
+    --true-uninstall :                      Désinstalle OpenSign et son répertoire d'installation et la base de donnée montée
 """
 }
 
@@ -102,7 +104,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 OPTIONS=$(getopt -o hu:o:m:c:p: \
-    --long help,host-url:,opensign-port:,mongo-port:,client-port:,installation-path:,smtp-host:,smtp-port:,smtp-mail:,uninstall,true-uninstall \
+    --long help,host-url:,opensign-port:,mongo-port:,client-port:,installation-path:,smtp-host:,smtp-port:,smtp-mail:,update,uninstall,true-uninstall \
     -n "$0" -- "$@")
 
 if [ $? -ne 0 ]; then
@@ -150,6 +152,10 @@ while true; do
             SMTP_MAIL="$2"
             shift 2
             ;;
+        --update)
+            UPDATE=1
+            shift
+            ;;
         --uninstall)
             uninstall 0
             exit 0
@@ -168,6 +174,13 @@ while true; do
             ;;
     esac
 done
+
+# MISE A JOUR
+if [ "$UPDATE" -eq 1 ]; then
+    bleu "Mise à jour des conteneurs"
+    docker compose -f "$INSTALLATION_PATH/docker-compose.yml" up --force-recreate --no-deps -d server client
+    exit 0
+fi
 
 if [ -z "$HOST_URL" ]; then
     help
