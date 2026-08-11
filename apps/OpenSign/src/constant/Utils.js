@@ -1513,17 +1513,18 @@ export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
   pdfDoc.registerFontkit(fontkit);
   const font = await pdfDoc.embedFont(fontBytes, { subset: true });
   //pdfOriginalWH contained all pdf's pages width and height
+  const fontSize = 10;
+  const textContent = documentId && `Identifiant de signature OpenSign : ${documentId} `;
+  const pages = pdfDoc.getPages();
+  const textWidth = font.widthOfTextAtSize(textContent, fontSize);
   for (let i = 0; i < pdfOriginalWH?.length; i++) {
-    const fontSize = 10;
-    const textContent = documentId && `Identifiant de signature OpenSign : ${documentId} `;
-    const pages = pdfDoc.getPages();
     const page = pages[i];
     const getSize = pdfOriginalWH[i];
     try {
       const getObj = compensateRotation(
         page.getRotation().angle,
-        10,
-        5,
+        getSize.width - textWidth - 10,
+        getSize.height - fontSize - 10,
         1,
         getSize,
         fontSize,
