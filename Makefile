@@ -13,6 +13,8 @@ help:
 	@echo "  make update              Redéploie les conteneurs de l'application pour effectuer des mises à jour, ne modifie pas le conteneur de base de données (permissions sudo nécessaires)"
 	@echo "  make uninstall           Supprime les conteneurs de l'application (permissions sudo nécessaires)"
 	@echo "  make true-uninstall      Supprime les conteneurs de l'application et leurs volumes (permissions sudo nécessaires)"
+	@echo "  make update-server       Crée l'image Docker du server et mets à jour l'application existante (permissions sudo nécessaires)"
+	@echo "  make update-client       Crée l'image Docker du client et mets à jour l'application existante (permissions sudo nécessaires)"
 	@echo "  make update-all          Crée les images Docker et mets à jour l'application existante (permissions sudo nécessaires)"
 	@echo "  make all                 Crée les images Docker et déploie l'application (permissions sudo nécessaires)"
 	@echo ""
@@ -41,6 +43,10 @@ uninstall:
 
 true-uninstall:
 	./installation-opensign.sh --true-uninstall
+
+update-server: build-server-image update
+
+update-client: build-client-image update
 
 update-all: build-all-images update
 
