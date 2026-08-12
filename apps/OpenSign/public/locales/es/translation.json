@@ -162,7 +162,7 @@
     "Embed": "Incrustar",
     "Copy TemplateId": "Copiar ID de plantilla",
     "Copy Public URL": "Copiar URL pública",
-    "extend-expiry-date": "Date d'expiration",
+    "extend-expiry-date": "Fecha de caducidad",
     "Duplicate Template": "Plantilla duplicada",
     "Duplicate": "Duplicada",
     "daily-mail-quota": "Cuota diaria de correos electrónicos",
@@ -1629,5 +1629,10 @@
     "viewed": "Visto",
     "awaited": "Pendiente",
     "created": "Creado"
-  }
+  },
+  "notes": {
+    "sign-yourself": "Nota para mí mismo",
+    "request-signatures": "Por favor, revise y firme este documento"
+  },
+  "select-placeholder": "Seleccionar..."
 }
