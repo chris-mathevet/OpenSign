@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo.png";
+import documentIDfont from "../assets/fonts/OpenSans-CondLight.ttf";
 import { getEnv } from "./Utils";
 
 export function serverUrl_fn() {
@@ -11,6 +12,7 @@ export function serverUrl_fn() {
 }
 export const appInfo = {
   applogo: logo,
+  documentIDfont: documentIDfont,
   appId: process.env.REACT_APP_APPID ? process.env.REACT_APP_APPID : "opensign",
   baseUrl: serverUrl_fn(),
   defaultRole: "contracts_User",

@@ -1507,7 +1507,7 @@ export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
   const appName = "InLibro - Signatures";
   // `fontBytes` is used to embed custom font in pdf
   const fontBytes = await fileasbytes(
-    "https://cdn.opensignlabs.com/webfonts/times.ttf"
+    appInfo.documentIDfont
   );
   pdfDoc.registerFontkit(fontkit);
   const font = await pdfDoc.embedFont(fontBytes, { subset: true });
@@ -1527,7 +1527,7 @@ export const embedDocId = async (pdfOriginalWH, pdfDoc, documentId) => {
         1,
         getSize,
         fontSize,
-        rgb(0.5, 0.5, 0.5),
+        rgb(0.008, 0.549, 0.71),
         font,
         page
       );
