@@ -852,12 +852,18 @@
     "l3": "Cargue una versión digital existente de su firma.",
     "l4": "Utilice un estilo de firma preestablecido guardado en 'Mi firma' en su configuración."
   },
+  "allowed-signature-types-types":{
+    "draw": "Dibujar",
+    "type": "Escribir",
+    "upload": "Subir",
+    "default": "Predeterminado"
+  },
   "notify-on-signatures": "Notificar sobre firmas",
   "notify-on-signatures-help": {
     "p1": "El creador del documento recibirá una notificación por correo electrónico cada vez que un firmante firme el documento.",
     "note": "Nota: Independientemente de esta configuración, siempre se envía un correo electrónico de finalización con el documento firmado y el certificado de finalización adjunto a todos los firmantes y al propietario del documento."
   },
-  "expiry-date": "Date d'expiration",
+  "expiry-date": "Fecha de caducidad",
   "expiry-date-updated": "La fecha de vencimiento se ha extendido con éxito hasta el {{newexpirydate}}",
   "expiry-date-error": "Proporcione una nueva fecha de vencimiento que sea posterior a la actual",
   "duplicate-template-alert": "¿Está seguro de que desea crear un duplicado de esta plantilla?",
