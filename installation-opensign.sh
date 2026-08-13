@@ -178,6 +178,7 @@ done
 # MISE A JOUR
 if [ "$UPDATE" -eq 1 ]; then
     bleu "Mise à jour des conteneurs"
+    sudo docker cp ./apps/OpenSignServer/files/. OpenSignServer-container:/usr/src/app/files/
     docker compose -f "$INSTALLATION_PATH/docker-compose.yml" up --force-recreate --no-deps -d server client
     exit 0
 fi
