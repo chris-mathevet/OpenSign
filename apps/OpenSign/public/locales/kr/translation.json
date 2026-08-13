@@ -37,6 +37,7 @@
   "action": "실행",
   "add": "추가",
   "add-new-folder": "새 폴더 추가",
+  "folder-name": "폴더 이름",
   "disable-documentId": "문서 ID 비활성화",
   "edit": "편집",
   "change-password": "비밀번호 변경",
@@ -171,7 +172,16 @@
     "Reset password": "비밀번호 재설정",
     "View formdata": "양식 데이터 보기",
     "Download all formdata": "모든 양식 데이터 다운로드",
-    "API credits": "API 크레딧"
+    "API credits": "API 크레딧",
+    "share-options": {
+      "clipboard": "클립보드에 복사",
+      "twitter": "Twitter에서 공유",
+      "facebook": "Facebook에서 공유",
+      "whatsapp": "WhatsApp에서 공유",
+      "gmail": "Gmail에서 공유",
+      "teams": "Teams에서 공유",
+      "outlook" : "Outlook에서 공유"
+    }
   },
   "report-heading": {
     "Sr.No": "일련 번호",
@@ -851,6 +861,12 @@
     "l2": "이름을 입력하고 다양한 글꼴 스타일 중에서 선택하여 서명을 만듭니다.",
     "l3": "기존 디지털 버전의 서명을 업로드합니다.",
     "l4": "설정의 '내 서명' 아래에 저장된 미리 설정된 서명 스타일을 사용합니다."
+  },
+  "allowed-signature-types-types": {
+    "draw": "그리기",
+    "type": "입력",
+    "upload": "업로드",
+    "default": "기본값"
   },
   "notify-on-signatures": "서명 시 알림",
   "notify-on-signatures-help": {
@@ -1622,5 +1638,10 @@
     "viewed": "조회됨",
     "awaited": "대기 중",
     "created": "생성됨"
-  }
+  },
+  "notes": {
+    "sign-yourself": "나에게 보내는 메모",
+    "request-signatures": "이 문서를 검토하고 서명해 주세요"
+  },
+  "select-placeholder": "선택..."
 }

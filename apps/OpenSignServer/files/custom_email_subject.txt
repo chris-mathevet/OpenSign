@@ -1,1 +1,1 @@
-Account Notice - {{appName}}
+{{appName}} Notification de compte

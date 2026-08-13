@@ -37,6 +37,7 @@
   "action": "कार्रवाई",
   "add": "जोड़ें",
   "add-new-folder": "नया फ़ोल्डर जोड़ें",
+  "folder-name": "फ़ोल्डर का नाम",
   "disable-documentId": "दस्तावेज़ आईडी अक्षम करें",
   "edit": "संपादित करें",
   "change-password": "पासवर्ड बदलें",
@@ -171,7 +172,16 @@
     "Reset password": "पासवर्ड रीसेट करें",
     "View formdata": "फॉर्म डेटा देखें",
     "Download all formdata": "सभी फॉर्म डेटा डाउनलोड करें",
-    "API credits": "API क्रेडिट्स"
+    "API credits": "API क्रेडिट्स",
+    "share-options": {
+      "clipboard": "क्लिपबोर्ड पर कॉपी करें",
+      "twitter": "Twitter पर साझा करें",
+      "facebook": "Facebook पर साझा करें",
+      "whatsapp": "WhatsApp पर साझा करें",
+      "gmail": "Gmail पर साझा करें",
+      "teams": "Teams पर साझा करें",
+      "outlook" : "Outlook पर साझा करें"
+    }
   },
   "report-heading": {
     "Sr.No": "क्रमांक",
@@ -851,6 +861,12 @@
     "l2": "अपना नाम दर्ज करें और हस्ताक्षर बनाने के लिए विभिन्न फ़ॉन्ट शैलियों में से चुनें।",
     "l3": "अपने हस्ताक्षर का मौजूदा डिजिटल संस्करण अपलोड करें।",
     "l4": "अपनी सेटिंग्स में 'मेरा हस्ताक्षर' के अंतर्गत सहेजी गई एक पूर्व-निर्धारित हस्ताक्षर शैली का उपयोग करें।"
+  },
+  "allowed-signature-types-types": {
+    "draw": "ड्रा करें",
+    "type": "टाइप करें",
+    "upload": "अपलोड करें",
+    "default": "डिफ़ॉल्ट"
   },
   "notify-on-signatures": "हस्ताक्षर पर सूचित करें",
   "notify-on-signatures-help": {
@@ -1622,5 +1638,10 @@
     "viewed": "देखा गया",
     "awaited": "प्रतीक्षित",
     "created": "बनाया गया"
-  }
+  },
+  "notes": {
+    "sign-yourself": "अपने लिए नोट",
+    "request-signatures": "कृपया इस दस्तावेज़ की समीक्षा करें और हस्ताक्षर करें"
+  },
+  "select-placeholder": "चुनें..."
 }

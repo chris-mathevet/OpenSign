@@ -667,34 +667,33 @@ export const getSecureUrl = url => {
 };
 
 export const mailTemplate = param => {
-  const themeColor = '#2596be';
-  const subject = `${param.senderName} has requested you to sign "${param.title}"`;
+  const themeColor = '#29A9D8';
   const AppName = appName;
   const logo = `<img src='${logoUrl}' height='50' />`;
 
+  const subject = `${param.senderName} vous a demandé de signer  "${param.title}"`;
   const body =
-    "<html><head><meta http-equiv='Content-Type' content='text/html;charset=UTF-8' /></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background:white;padding-bottom:20px'><div style='padding:10px'>" +
+    "<html><head><meta http-equiv='Content-Type' content='text/html;charset=UTF-8' /></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background:white;padding-bottom:20px'>" +
     logo +
-    `</div><div style='padding:2px;font-family:system-ui;background-color:${themeColor}'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Digital Signature Request</p></div><div><p style='padding:20px;font-size:14px;margin-bottom:10px'>` +
+    `<div style='padding:2px;font-family:system-ui;background-color:${themeColor}'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Demande de signature électronique</p></div><div><p style='padding:20px;font-size:14px;margin-bottom:10px'>` +
     param.senderName +
-    ' has requested you to review and sign <strong>' +
+    " vous a demandé de consulter et de signer <strong>" +
     param.title +
-    "</strong>.</p><div style='padding: 5px 0px 5px 25px;display:flex;flex-direction:row;justify-content:space-around'><table><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Sender</td><td></td><td style='color:#626363;font-weight:bold'>" +
+    "</strong>.</p><div style='padding: 5px 0px 5px 25px;display:flex;flex-direction:row;justify-content:space-around'><table><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Expéditeur</td><td></td><td style='color:#626363;font-weight:bold'>" +
     param.senderMail +
-    "</td></tr><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Organization</td><td></td><td style='color:#626363;font-weight:bold'> " +
+    "</td></tr><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Organisation</td><td></td><td style='color:#626363;font-weight:bold'> " +
     param.organization +
-    "</td></tr><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Expires on</td><td></td><td style='color:#626363;font-weight:bold'>" +
+    "</td></tr><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Date d'expiration</td><td></td><td style='color:#626363;font-weight:bold'>" +
     param.localExpireDate +
     "</td></tr><tr><td style='font-weight:bold;font-family:sans-serif;font-size:15px'>Note</td><td></td><td style='color:#626363;font-weight:bold'>" +
     param.note +
     "</td></tr><tr><td></td><td></td></tr></table></div> <div style='margin-left:70px'><a target=_blank href=" +
     param.signingUrl +
-    "><button style='padding:12px;background-color:#d46b0f;color:white;border:0px;font-weight:bold;margin-top:30px'>Sign here</button></a></div><div style='display:flex;justify-content:center;margin-top:10px'></div></div></div><div><p> This is an automated email from " +
-    AppName +
-    '. For any queries regarding this email, please contact the sender ' +
+    "><button style='padding:12px;background-color:#d46b0f;color:white;border:0px;font-weight:bold;margin-top:30px'>Signer ici</button></a></div><div style='display:flex;justify-content:center;margin-top:10px'></div></div></div><div><p> Ceci est un courriel automatique envoyé par " +
+    appName +
+    ". Pour toute question concernant cet courriel, veuillez contacter directement l'expéditeur à l'adresse " +
     param.senderMail +
-    ` directly.</p></div></div></body></html>`;
-
+    ".</p></div></div></body></html> ";
   return { subject, body };
 };
 

@@ -4,13 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
-<body style="text-align: center;">
-    <p style="font-weight: bolder; font-size: large;">Welcome!</p>
-    <p>Click the button below to verify your email address:</p>
-    <br />
-    <p><a href="{{{link}}}" style="background-color: lightskyblue; cursor: pointer; border-radius: 5px; padding: 10px; border-style: solid; border-width: 2px; text-decoration: none; font-weight: bolder; color:blue">Verify email</a></p>
-    <br />
-    <p>{{appName}}</p>
+<body>
+    <div style='background-color:#f5f5f5;padding:20px'>
+        <div style='background-color:white;'>
+            <div style='padding:2px;font-family:system-ui;background-color:#29A9D8;'>
+                <p style='font-size:20px;font-weight:400;color:white;padding-left:20px;'>Vérification d'adresse courriel
+                    - {{appName}}</p>
+            </div>
+            <div style='padding:20px;'>
+                <p style="font-weight: bolder; font-size: large;">Bienvenue {{username}} !</p>
+                <p>Cliquez sur le bouton ci-dessous pour vérifier votre adresse courriel :</p>
+                <br />
+                <p><a href="{{{link}}}"
+                        style="background-color: #29A9D8; cursor: pointer; border-radius: 5px; padding: 10px; border-style: solid; border-width: 2px; text-decoration: none; font-weight: bolder; color:black">Vérifier
+                        mon adresse courriel</a></p>
+                <br />
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

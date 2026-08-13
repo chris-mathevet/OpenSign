@@ -85,7 +85,7 @@ export const RenderReportCell = ({
       return (
         <td key={col} className="p-2 text-center">
           {rowData?.Folder?.Name ||
-            t("sidebar.InLibro - Signatures Drive", { appName: drivename })}
+            t("sidebar.Drive", { appName: drivename })}
         </td>
       );
     case "File":

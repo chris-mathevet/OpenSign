@@ -37,6 +37,7 @@
   "action": "Aktion",
   "add": "Hinzufügen",
   "add-new-folder": "Neuen Ordner hinzufügen",
+  "folder-name": "Ordnername",
   "disable-documentId": "DocumentId deaktivieren",
   "edit": "Bearbeiten",
   "change-password": "Passwort ändern",
@@ -171,7 +172,16 @@
     "Reset password": "Passwort zurücksetzen",
     "View formdata": "Formulardaten ansehen",
     "Download all formdata": "Alle Formulardaten herunterladen",
-    "API credits": "API-Credits"
+    "API credits": "API-Credits",
+    "share-options": {
+      "clipboard": "In die Zwischenablage kopieren",
+      "twitter": "Auf Twitter teilen",
+      "facebook": "Auf Facebook teilen",
+      "whatsapp": "Auf WhatsApp teilen",
+      "gmail": "Über Gmail teilen",
+      "teams": "Über Teams teilen",
+      "outlook" : "Über Outlook teilen"
+    }
   },
   "report-heading": {
     "Sr.No": "Nr.",
@@ -851,6 +861,12 @@
     "l2": "Geben Sie Ihren Namen ein und wählen Sie aus verschiedenen Schriftarten, um eine Signatur zu erstellen.",
     "l3": "Laden Sie eine vorhandene digitale Version Ihrer Signatur hoch.",
     "l4": "Verwenden Sie einen voreingestellten Signaturstil, der unter 'Meine Signatur' in Ihren Einstellungen gespeichert ist."
+  },
+  "allowed-signature-types-types": {
+    "draw": "Zeichnen",
+    "type": "Tippen",
+    "upload": "Hochladen",
+    "default": "Standard"
   },
   "notify-on-signatures": "Benachrichtigen bei Signaturen",
   "notify-on-signatures-help": {
@@ -1621,5 +1637,10 @@
     "viewed": "Angesehen",
     "awaited": "Ausstehend",
     "created": "Erstellt"
-  }
+  },
+  "notes": {
+    "sign-yourself": "Notiz an mich selbst",
+    "request-signatures": "Bitte überprüfen und unterschreiben Sie dieses Dokument"
+  },
+  "select-placeholder": "Auswählen..."
 }

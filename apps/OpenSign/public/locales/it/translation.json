@@ -37,6 +37,7 @@
   "action": "Azione",
   "add": "Aggiungi",
   "add-new-folder": "Aggiungi una nuova cartella",
+  "folder-name": "Nome della cartella",
   "disable-documentId": "Disabilita DocumentId",
   "edit": "Modifica",
   "change-password": "Cambia Password",
@@ -171,7 +172,16 @@
     "Reset password": "Reimposta password",
     "View formdata": "Visualizza i dati del modulo",
     "Download all formdata": "Scarica tutti i dati del modulo",
-    "API credits": "Crediti API"
+    "API credits": "Crediti API",
+    "share-options": {
+      "clipboard": "Copia negli appunti",
+      "twitter": "Condividi su Twitter",
+      "facebook": "Condividi su Facebook",
+      "whatsapp": "Condividi su WhatsApp",
+      "gmail": "Condividi su Gmail",
+      "teams": "Condividi su Teams",
+      "outlook" : "Condividi su Outlook"
+    }
   },
   "report-heading": {
     "Sr.No": "Nr.",
@@ -851,6 +861,12 @@
     "l2": "Inserisci il tuo nome e scegli tra vari stili di font per creare una firma.",
     "l3": "Carica una versione digitale esistente della tua firma.",
     "l4": "Usa uno stile di firma preimpostato salvato sotto 'La mia firma' nelle tue impostazioni."
+  },
+  "allowed-signature-types-types": {
+    "draw": "Disegna",
+    "type": "Digita",
+    "upload": "Carica",
+    "default": "Predefinito"
   },
   "notify-on-signatures": "Notifica sulle firme",
   "notify-on-signatures-help": {
@@ -1622,5 +1638,10 @@
     "viewed": "Visualizzato",
     "awaited": "In attesa",
     "created": "Creato"
-  }
+  },
+  "notes": {
+    "sign-yourself": "Nota personale",
+    "request-signatures": "Si prega di esaminare e firmare questo documento"
+  },
+  "select-placeholder": "Seleziona..."
 }

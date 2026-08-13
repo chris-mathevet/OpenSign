@@ -37,7 +37,7 @@ export default async function forwardDoc(request) {
         for (let i = 0; i < recipients.length; i++) {
           const logo = `<img src='${logoUrl}' height='50' style='padding:20px'/>`;
 
-          const themeColor = '#47a3ad';
+          const themeColor = '#29A9D8';
 
           let params = {
             extUserId: extUserId,
@@ -49,9 +49,9 @@ export default async function forwardDoc(request) {
             from: from,
             html:
               `<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background-color:white'><div>` +
-              `${logo}</div><div style='padding:2px;font-family:system-ui;background-color:${themeColor}'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document Copy</p></div><div>` +
-              `<p style='padding:20px;font-family:system-ui;font-size:14px'>A copy of the document <strong>${docName}</strong> is attached to this email. Kindly download the document from the attachment.</p>` +
-              `</div></div><div><p>This is an automated email from ${TenantAppName}. For any queries regarding this email, please contact the sender ${replyTo} directly.</p></div></div></body></html>`,
+              `${logo}</div><div style='padding:2px;font-family:system-ui;background-color:${themeColor}'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Copie du document</p></div><div>` +
+              `<p style='padding:20px;font-family:system-ui;font-size:14px'>Une copie du document <strong>${docName}</strong> est attaché à ce courriel. Veuillez télécharger le document joint.</p>` +
+              `</div></div><div><p>Ceci est un courriel automatique de ${TenantAppName}. Pour toute question concernant cet courriel, veuillez contacter directement l'expéditeur à l'adresse ${replyTo}.</p></div></div></body></html>`,
           };
           mailRes = await sendMailWithAttachment(params);
           // console.log('mailRes', mailRes);

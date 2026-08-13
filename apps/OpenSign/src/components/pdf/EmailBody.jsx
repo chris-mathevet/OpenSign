@@ -16,7 +16,7 @@ export function EmailBody(props) {
           onInput={(e) => e.target.setCustomValidity("")}
           value={props.requestSubject}
           onChange={(e) => props?.onChangeSubject?.(e.target.value)}
-          placeholder='${senderName} has requested you to sign "${documentName}"'
+          placeholder='${senderName} vous a demandé de signer "${documentName}"'
           className="op-input op-input-bordered op-input-sm focus:outline-none hover:border-base-content w-full text-xs"
         />
         <label className="flex justify-between text-sm ml-2 mt-3">

@@ -53,7 +53,7 @@ const getRequestEmail = (
       data: {
         style: {
           color: "#FFFFFF",
-          backgroundColor: "#47A3AD",
+          backgroundColor: "#29A9D8",
           fontSize: 20,
           fontWeight: "bold",
           padding: {
@@ -84,7 +84,7 @@ const getRequestEmail = (
         },
         props: {
           contents:
-            "{{sender_name}} has requested you to review and sign <b>{{document_title}}</b>."
+            "{{sender_name}} vous a demandé de consulter et de signer <b>{{document_title}}</b>."
         }
       }
     },
@@ -295,7 +295,7 @@ const getRequestEmail = (
           buttonStyle: "rectangle",
           fullWidth: false,
           size: "medium",
-          text: "Sign Here",
+          text: "Signez ici",
           url: "{{signing_url}}"
         }
       }
@@ -315,7 +315,7 @@ const getRequestEmail = (
           }
         },
         props: {
-          contents: `This is an automated email from ${appName}. For any queries regarding this email, please contact the sender <a href="mailto:{{sender_mail}}" target="_blank">{{sender_mail}}</a> directly.`
+          contents: `Ceci est un courriel automatique de ${appName}. Pour toute question concernant cet courriel, veuillez contacter directement l'expéditeur à l'adresse <a href="mailto:{{sender_mail}}" target="_blank">{{sender_mail}}</a>.`
         }
       }
     }

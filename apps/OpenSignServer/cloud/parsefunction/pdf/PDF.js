@@ -170,9 +170,9 @@ async function sendNotifyMail(doc, signUser, mailProvider, publicUrl) {
       const subject = `Document "${pdfName}" has been signed by ${signerName}`;
       const body =
         "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background-color:white'>" +
-        `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#47a3ad'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document signed by ${signerName}</p>` +
+        `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#29A9D8'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document signed by ${signerName}</p>` +
         `</div><div style='padding:20px;font-family:system-ui;font-size:14px'><p>Dear ${creatorName},</p><p>${pdfName} has been signed by ${signerName} "${signerEmail}" successfully</p>` +
-        `<p><a href=${viewDocUrl} target=_blank>View Document</a></p></div></div><div><p>This is an automated email from ${TenantAppName}. For any queries regarding this email, ` +
+        `<p><a href=${viewDocUrl} target=_blank>View Document</a></p></div></div><div><p>Ceci est un courriel automatique de ${TenantAppName}. For any queries regarding this email, ` +
         `please contact the sender ${creatorEmail} directly.</p></div></div></body></html>`;
 
       const params = {
@@ -211,12 +211,12 @@ async function sendCompletedMail(obj) {
     signersMail = sender.Email;
   }
   const recipient = signersMail;
-  let subject = `Document "${pdfName}" has been signed by all parties`;
+  let subject = `Document "${pdfName}" a été signé par toutes les parties`;
   let body =
     "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background-color:white'>" +
-    `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#47a3ad'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document signed successfully</p></div><div>` +
-    `<p style='padding:20px;font-family:system-ui;font-size:14px'>All parties have successfully signed the document <b>"${pdfName}"</b>. Kindly download the document from the attachment.</p>` +
-    `</div></div><div><p>This is an automated email from ${TenantAppName}. For any queries regarding this email, please contact the sender ${sender.Email} directly.</p></div></div></body></html>`;
+    `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#29A9D8'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document signé avec succès</p></div><div>` +
+    `<p style='padding:20px;font-family:system-ui;font-size:14px'>Toutes les parties ont signé le document avec succès. <b>"${pdfName}"</b>. Veuillez télécharger le document joint.</p>` +
+    `</div></div><div><p>Ceci est un courriel automatique de ${TenantAppName}. Pour toute question concernant cet courriel, veuillez contacter directement l'expéditeur à l'adresse ${sender.Email}.</p></div></div></body></html>`;
 
   if (obj?.isCustomMail) {
     const tenant = sender?.TenantId;
