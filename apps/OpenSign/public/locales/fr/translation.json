@@ -216,7 +216,7 @@
       "whatsapp": "Partager sur WhatsApp",
       "gmail": "Partager avec Gmail",
       "teams": "Partager sur Teams",
-      "outlook" : "Partager avec Outlook"
+      "outlook": "Partager avec Outlook"
     }
   },
   "report-help": {
@@ -1282,10 +1282,12 @@
   "email-settings-redirect-message": "Ce paramètre a été déplacé de la console vers Paramètres du menu principal → Préférences. Cette page sera supprimée dans les prochaines versions.",
   "go-to-preferences-menu": "Aller au menu Préférences",
   "document-download-filename-format": "Format du nom de fichier pour le téléchargement du document",
-  "document-download-filename-format-docname": "Nom du document.pdf",
-  "document-download-filename-format-docname-signed": "Nom du document - Signé.pdf",
-  "document-download-filename-format-docname-email": "Nom du document - name@domain.com.pdf",
-  "document-download-filename-format-docname-email-date": "Nom du document - name@domain.com - date.pdf",
+  "document-download-filename-format-options": {
+    "docname": "Nom du document.pdf",
+    "docname-signed": "Nom du document - Signé.pdf",
+    "docname-email": "Nom du document - name@domain.com.pdf",
+    "docname-email-date": "Nom du document - name@domain.com - Date.pdf"
+  },
   "preview": "Aperçu : ",
   "download-filename-format-help": "Choisissez comment les fichiers PDF téléchargés sont nommés. Votre sélection est enregistrée dans votre profil et utilisée dans toute l'application.",
   "delete-action-prohibited": "Cette action n'est pas autorisée. Veuillez contacter votre administrateur pour demander la suppression du compte.",

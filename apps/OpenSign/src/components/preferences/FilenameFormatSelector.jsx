@@ -11,12 +11,12 @@ const FilenameFormatSelector = ({ fileNameFormat, setFileNameFormat }) => {
    * Keep IDs stable; you can freely change labels for UX.
    */
   const FILENAME_FORMATS = [
-    { id: "DOCNAME", label: t("document-download-filename-format-docname") },
-    { id: "DOCNAME_SIGNED", label: t("document-download-filename-format-docname-signed") },
-    { id: "DOCNAME_EMAIL", label: t("document-download-filename-format-docname-email") },
+    { id: "DOCNAME", label: t("document-download-filename-format-options.docname") },
+    { id: "DOCNAME_SIGNED", label: t("document-download-filename-format-options.docname-signed") },
+    { id: "DOCNAME_EMAIL", label: t("document-download-filename-format-options.docname-email") },
     {
       id: "DOCNAME_EMAIL_DATE",
-      label: t("document-download-filename-format-docname-email-date")
+      label: t("document-download-filename-format-options.docname-email-date")
     }
   ];
 
