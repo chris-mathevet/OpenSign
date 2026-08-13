@@ -51,7 +51,7 @@ const getCompletionEmail = (
       data: {
         style: {
           color: "#FFFFFF",
-          backgroundColor: "#47A3AD",
+          backgroundColor: "#29A9D8",
           fontSize: 20,
           fontWeight: "bold",
           padding: {
@@ -63,7 +63,7 @@ const getCompletionEmail = (
         },
         props: {
           markdown: false,
-          text: "Document signed successfully\n\n"
+          text: "Document signé avec succès\n\n"
         }
       }
     },
@@ -231,7 +231,7 @@ const getCompletionEmail = (
           }
         },
         props: {
-          contents: `This is an automated email from ${appName}. For any queries regarding this email, please contact the sender <a href="mailto:{{sender_mail}}" target="_blank">{{sender_mail}}</a> directly.`
+          contents: `Ceci est un courriel automatique de ${appName}. Pour toute question concernant cet courriel, veuillez contacter directement l'expéditeur à l'adresse <a href="mailto:{{sender_mail}}" target="_blank">{{sender_mail}}</a>.`
         }
       }
     },
@@ -250,7 +250,7 @@ const getCompletionEmail = (
         },
         props: {
           contents:
-            'All parties have successfully signed the document "<b>{{document_title}}</b>". Kindly download the document from the attachment.'
+            'Toutes les parties ont signé le document avec succès. "<b>{{document_title}}</b>". Veuillez télécharger le document joint.'
         }
       }
     }

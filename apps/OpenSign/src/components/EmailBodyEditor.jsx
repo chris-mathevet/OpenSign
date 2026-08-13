@@ -102,7 +102,7 @@ const EmailBodyEditor = ({
               className="w-full min-h-[70vh] focus:outline-none"
               value={inputHtml}
               onChange={(e) => handleChange(e)}
-              placeholder="<html><body><h1>Hello!</h1></body></html>"
+              placeholder="<html><body><h1>Bonjour !</h1></body></html>"
             />
           </div>
         </div>

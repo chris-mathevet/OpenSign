@@ -23,11 +23,11 @@ async function sendDeclineMail(doc, publicUrl, userId, reason) {
     const subject = `Document "${pdfName}" has been declined by ${signerName}`;
     const body =
       "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/></head><body><div style='background-color:#f5f5f5;padding:20px'><div style='background-color:white'>" +
-      `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#47a3ad'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document declined by ${signerName}</p>` +
+      `<div>${logo}</div><div style='padding:2px;font-family:system-ui;background-color:#29A9D8'><p style='font-size:20px;font-weight:400;color:white;padding-left:20px'>Document declined by ${signerName}</p>` +
       `</div><div style='padding:20px;font-family:system-ui;font-size:14px'><p>Dear ${creatorName},</p>` +
       `<p>${pdfName} has been declined by ${signerName} "${signerEmail}" on ${new Date().toLocaleDateString()}.</p>` +
       `<p>Decline Reason: ${reason || 'Not specified'}</p>` +
-      `<p><a href=${viewDocUrl} target=_blank>View Document</a></p></div></div><div><p>This is an automated email from ${TenantAppName}. For any queries regarding this email, ` +
+      `<p><a href=${viewDocUrl} target=_blank>View Document</a></p></div></div><div><p>Ceci est un courriel automatique de ${TenantAppName}. For any queries regarding this email, ` +
       `please contact the sender ${creatorEmail} directly.</p></div></div></body></html>`;
 
     const params = {
