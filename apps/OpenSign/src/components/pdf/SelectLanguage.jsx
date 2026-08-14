@@ -8,6 +8,7 @@ function SelectLanguage(props) {
     { value: "en", text: "English" }, //english
     { value: "es", text: "Española" }, //spanish
     { value: "fr", text: "Français" }, //french
+    { value: "fr_ca", text: "Français-Canadien" }, //canadian french
     { value: "it", text: "Italiano" }, //italian
     { value: "de", text: "Deutsch" }, //german
     { value: "hi", text: "हिन्दी" }, //hindi
