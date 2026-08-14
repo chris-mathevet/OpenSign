@@ -236,8 +236,10 @@ fi
 # PATCH
 docker compose -f "$INSTALLATION_PATH/docker-compose.yml" up --force-recreate -d
 
+chmod 600 "$INSTALLATION_PATH/.env.prod"
+chmod 600 "$INSTALLATION_PATH/docker-compose.yml"
+
 a2ensite "$APACHEFILE"
 systemctl reload apache2
 
 vert "Installation terminée, veuillez creer l'utilisateur administrateur ici : $HOST_URL/addadmin"
-vert "Login base de donnée : $MONGO_USER @ $MONGO_PASSWORD"
