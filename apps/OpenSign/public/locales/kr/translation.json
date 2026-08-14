@@ -1632,6 +1632,8 @@
   "access-code-warning": "문서가 발송된 후에는 이 접속 코드를 변경하거나 검색할 수 없습니다.",
   "copy-access-code": "접속 코드 복사",
   "access-code-upgrade-msg": "접속 코드는 유료 요금제에서만 사용할 수 있습니다. 수신자에게 접속 코드를 추가하려면 요금제를 업그레이드하세요.",
+  "show-access-code": "액세스 코드 표시",
+  "hide-access-code": "액세스 코드 숨기기",
   "already-copied-to-clipboard": "이미 클립보드에 복사됨",
   "audit-activity": {
     "sent": "전송됨",
